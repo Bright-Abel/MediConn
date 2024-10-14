@@ -1,101 +1,67 @@
-import Image from "next/image";
+'use client';
+import Logo from '@/components/Logo';
+import NavBar from '@/components/NavBar';
+import Sidebar from '@/components/Sidebar';
+import ToggleComp from '@/components/ToggleComp';
+import WhyUs from '@/components/WhyUs';
+import Image from 'next/image';
+import Testimonial from '@/components/Testimonial';
+import MarqueeSlider from '@/components/MarqueeSlider';
 
-export default function Home() {
+const Landing = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="">
+      <Sidebar />
+      <header className="section-header">
+        <NavBar />
+        <div className="px-8 lg:px-14 pt-4 xl:px-28 flex flex-col lg:flex-row items-center lg:items-start">
+          <div className="w-full max-w-[550px] text-[#496A8D] flex flex-col gap-4 items-center lg:items-start text-center lg:text-left text-pretty">
+            <h1 className="text-xl md:text-3xl xl:text-5xl font-bold">
+              Book Appointments with Top Doctors Anytime, Anywhere!
+            </h1>
+            <div className="relative glass-background pt-4 pb-2 px-2 flex flex-col gap-5">
+              <p className=" text-sm font-medium md:text-lg  xl:text-xl">
+                Find the right doctor for you and schedule appointments with
+                ease through our user-friendly platform.
+              </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+              <ToggleComp
+                notActive="get appointment"
+                type="Hero"
+                className="xl:ml-16 self-end"
+                link="/login"
+              />
+            </div>
+          </div>
+
+          <div className="flex relative">
             <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/assets/images/landing-doc.png"
+              alt="image"
+              width={1000}
+              height={1000}
+              className="w-[28rem] h-[28rem] object-contain relative z-10"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            {/* <Image
+              src="/assets/images/calenda.png"
+              alt="image"
+              width={1000}
+              height={1000}
+              className="absolute top-6 left-28 md:left-60 lg:inset-0 lg:relative w-[12rem] h-[12rem] object-contain"
+            /> */}
+            <Image
+              src="/assets/svgs/doc.svg"
+              alt="image"
+              width={100}
+              height={100}
+              className="absolute top-6 left-28 md:left-60 block lg:hidden xl:block xl:inset-0 lg:relative w-[18rem] h-[18rem] object-contain"
+            />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </header>
+      <WhyUs />
+      <MarqueeSlider />
     </div>
   );
-}
+};
+export default Landing;

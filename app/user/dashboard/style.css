@@ -1,0 +1,77 @@
+.nav-links {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  color: #627d98;
+  padding: 1rem 0;
+  padding-left: 2.5rem;
+  text-transform: capitalize;
+  transition: 0.3s ease-in-out all;
+}
+.nav-link:hover {
+  color: #829ab1;
+}
+
+.nav-link:hover .icon {
+  animation: icon 0.5s ease-in-out 1;
+}
+@keyframes icon {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+  75% {
+    transform: rotate(-6deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.nav-link:hover .icon {
+  color: #14b8a6;
+}
+
+.icon {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  display: grid;
+  place-items: center;
+  transition: 0.3s ease-in-out all;
+}
+.active {
+  color: #14b8a6;
+  border-left: 7px solid #0d9488;
+}
+.active .icon {
+  color: #14b8a6;
+}
+
+.remove-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  border-radius: 0px;
+}
+
+.remove-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.remove-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 0px;
+}
+
+.remove-scrollbar::-webkit-scrollbar-thumb:hover {
+  /* background: #1e2238; */
+  background: transparent;
+}
