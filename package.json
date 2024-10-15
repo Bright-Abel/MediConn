@@ -57,6 +57,7 @@
     "@types/aos": "^3.0.7",
     "@types/cookie": "^0.6.0",
     "@types/node": "^20",
+    "@types/nprogress": "^0.2.3",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/uuid": "^10.0.0",
