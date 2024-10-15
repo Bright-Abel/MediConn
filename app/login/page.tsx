@@ -29,7 +29,7 @@ const Login = () => {
           <LoginForm />
           <div className="w-full text-center">
             <h4 className="text-white">
-              Don't have an account?{' '}
+              Don&apos;t have an account?{' '}
               <Link
                 href="/sign-up"
                 className="hover:underline duration-500 font-bold text-[#ABB8C4] hover:text-[#5bbfd1]"

@@ -1,12 +1,11 @@
 'use client';
-import Logo from '@/components/Logo';
+
 import NavBar from '@/components/NavBar';
 import Sidebar from '@/components/Sidebar';
 import ToggleComp from '@/components/ToggleComp';
-import WhyUs from '@/components/WhyUs';
+
 import Image from 'next/image';
-import Testimonial from '@/components/Testimonial';
-import MarqueeSlider from '@/components/MarqueeSlider';
+
 
 const Landing = () => {
   return (

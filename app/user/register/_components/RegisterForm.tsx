@@ -3,7 +3,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 // import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import {
-  Doctors,
   genderOptions,
   IdentificationTypes,
   PatientFormDefaultValues,

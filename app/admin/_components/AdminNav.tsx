@@ -3,7 +3,7 @@ import { signOutUser } from '@/lib/actions/patient.action';
 import { useRouter } from 'next/navigation';
 import { LiaPowerOffSolid } from 'react-icons/lia';
 import Link from 'next/link';
-import Logo from '@/components/Logo';
+
 const AdminNav = () => {
   const router = useRouter();
   const handleSignout = async () => {

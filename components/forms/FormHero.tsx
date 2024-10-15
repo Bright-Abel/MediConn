@@ -1,15 +1,12 @@
-import Typewriter from 'typewriter-effect';
-import clsx from 'clsx';
-
-interface FormHeroProps {
-  className?: string;
-  text: string;
-  pText: string;
-}
-const FormHero: React.FC<FormHeroProps> = ({ className, text, pText }) => {
+// interface FormHeroProps {
+//   className?: string;
+//   text: string;
+//   pText: string;
+// }
+const FormHero = () => {
   return (
     <section>
-        <h1 className=""></h1>
+      <h1 className=""></h1>
       {/* <div className={clsx('', className)}>
         <Typewriter
           onInit={(typewriter) => {
@@ -17,7 +14,6 @@ const FormHero: React.FC<FormHeroProps> = ({ className, text, pText }) => {
           }}
         />
       </div> */}
-
     </section>
   );
 };

@@ -1,5 +1,5 @@
 import Marquee from 'react-fast-marquee';
-import Testimonial from './Testimonial';
+
 import { testimonials } from '@/constant/data-json';
 import TestimonialCard from './TestimonialCard';
 const MarqueeSlider = () => {

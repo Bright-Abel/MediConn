@@ -7,7 +7,7 @@ import CustomForm from '@/components/forms/CustomForm';
 import { FormFieldType } from '@/components/forms/FormTypes';
 import SubmitButton from '@/components/SubmitButton';
 import { createDoctor } from '@/lib/form-validation';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { professionTypes } from './data.json';
 import { SelectItem } from '@/components/ui/select';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
@@ -15,11 +15,7 @@ import { genderOptions } from '@/constant/data-json';
 import { cn } from '@/lib/utils';
 import { Label } from '@/components/ui/label';
 import FileUploader from '@/components/FileUploader';
-import {
-  createDoctorDetail,
-  getDoctors,
-  uploadImage,
-} from '@/lib/actions/doctor.action';
+import { createDoctorDetail, uploadImage } from '@/lib/actions/doctor.action';
 import { showToast } from '@/components/showToast';
 
 const DoctorForm = () => {
@@ -53,7 +49,7 @@ const DoctorForm = () => {
       formData.append('blobFile', blobFile);
       formData.append('fileName', values.physician_img[0].name);
     }
-    let uploadImgUrl = await uploadImage(formData);
+    const uploadImgUrl = await uploadImage(formData);
 
     try {
       const doctorData = {

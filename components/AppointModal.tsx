@@ -28,8 +28,8 @@ const AppointModal: React.FC<AppointmentMaodalProps> = ({
   patient,
   //   userId,
   appointmentId,
-  title,
-  description,
+  // title,
+  // description,
 }) => {
   const [open, setOpen] = useState<boolean>(false);
   const [doctors, setDoctors] = useState<DoctorParams[]>([]);

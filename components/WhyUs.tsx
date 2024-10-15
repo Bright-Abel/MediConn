@@ -1,5 +1,5 @@
 import { whyUs } from '@/constant/data-json';
-import Image from 'next/image';
+
 const WhyUs = () => {
   return (
     <section className="bg-[#496A8D] p-2 md:p-5 lg:p-10 w-full">

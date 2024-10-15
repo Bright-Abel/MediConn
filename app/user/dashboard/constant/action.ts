@@ -1,5 +1,3 @@
-import { StringToBoolean } from 'class-variance-authority/types';
-
 export const getUserInitials = (name: string) => {
   const userName = name.split(' ');
   if (userName.length < 1) {

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Image from 'next/image';
 const NotFoundPage = () => {
   useEffect(() => {
     AOS.init({
@@ -15,7 +16,7 @@ const NotFoundPage = () => {
   return (
     <main className="grid place-items-center min-h-[100vh] px-8">
       <div className="text-center">
-        <img
+        <Image
           src="/assets/svgs/error.svg"
           alt=""
           className="w-1/2 mx-auto"

@@ -12,11 +12,10 @@ import { LoginFormValidation } from '@/lib/form-validation/index';
 import { loginUser } from '@/lib/actions/patient.action';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useToast } from '@/hooks/use-toast';
+
 import { showToast } from '@/components/showToast';
 
 const LoginForm = () => {
-  const { toast } = useToast();
   const router = useRouter();
   const form = useForm<z.infer<typeof LoginFormValidation>>({
     resolver: zodResolver(LoginFormValidation),
@@ -58,7 +57,7 @@ const LoginForm = () => {
           style: { backgroundColor: '#fff', color: '#dc2626' },
         });
       }
-    } catch (error) {
+    } catch {
       setIsLoading(false);
     }
   }

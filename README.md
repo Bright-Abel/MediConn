@@ -92,3 +92,4 @@ NEXT_PUBLIC_SENTRY_DSN=your_sentry_dsn
 ### Admin Dashboard
 
 - Admins can log in to the dashboard to manage doctor profiles and oversee appointment bookings.
+  

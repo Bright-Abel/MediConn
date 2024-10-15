@@ -1,18 +1,12 @@
 'use client';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { fetchAppointmentType } from '@/constant/sliceFeature';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import clsx from 'clsx';
-import { RootState } from '@/store/index';
-
 
 const arr = ['scheduled', 'pending', 'cancelled'];
 
 const AppointmentTabs = () => {
-  const { getAppointmentType } = useSelector(
-    (state: RootState) => state.dataSlice
-  );
-
   const dispatch = useDispatch();
   return (
     <Tabs

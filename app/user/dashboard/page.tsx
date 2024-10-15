@@ -1,8 +1,4 @@
-import {
-  getUserSession,
-  getUser,
-  getPatient,
-} from '@/lib/actions/patient.action';
+import { getUserSession, getPatient } from '@/lib/actions/patient.action';
 import { redirect } from 'next/navigation';
 import { FirstHero, SecondHero, ThirdHero } from './_components';
 import { getUserAppointments } from '@/lib/actions/appointment.action';
@@ -10,8 +6,6 @@ const Dashboard = async () => {
   const userID = await getUserSession();
 
   const { userId } = userID;
-
-  const user = await getUser(userId);
 
   const patient = await getPatient(userId);
 

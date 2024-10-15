@@ -3,7 +3,7 @@ import { DoctorParams, GetPatient, Status } from '@/types';
 import { Form } from '../ui/form';
 import CustomForm from './CustomForm';
 import { FormFieldType } from './FormTypes';
-import { Doctors } from '@/constant/data-json';
+
 import { useForm } from 'react-hook-form';
 import { SelectItem } from '@/components/ui/select';
 import Image from 'next/image';

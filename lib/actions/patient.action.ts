@@ -7,8 +7,6 @@ import { CreateUserParams, RegisterUserParams } from '@/types/index';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
-import { serialize } from 'cookie';
-
 export const createUser = async (data: CreateUserParams) => {
   const { phone, password, email, name } = data;
   try {

@@ -35,7 +35,7 @@ const ThirdHero = ({ appointments, userId }: ThirdHeroProps) => {
         if (appointment) {
           setIsLoading(false);
         }
-      } catch (error) {
+      } catch {
         setIsLoading(false);
       }
     };
@@ -44,7 +44,7 @@ const ThirdHero = ({ appointments, userId }: ThirdHeroProps) => {
 
   useEffect(() => {
     dispatch(appointmentType(appointments));
-  }, [getAppointmentType]);
+  }, [getAppointmentType, dispatch, appointments]);
 
   return (
     <div className="w-full">

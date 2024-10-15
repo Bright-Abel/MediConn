@@ -18,7 +18,6 @@ interface ToggleProps {
 
 const ToggleComp: React.FC<ToggleProps> = ({
   className,
-  isActive,
   notActive,
   type,
   link,
@@ -30,7 +29,7 @@ const ToggleComp: React.FC<ToggleProps> = ({
     if (active) {
       router.push(link);
     }
-  }, [active]);
+  }, [active, link, router]);
 
   // const linkTo = () => {
   //   if (active) {

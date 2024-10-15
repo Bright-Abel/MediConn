@@ -1,6 +1,6 @@
 'use server';
 
-import { databases, storage, users, messaging } from '../appwrite.config';
+import { databases, messaging } from '../appwrite.config';
 import { ID, Query } from 'node-appwrite';
 
 import { revalidatePath } from 'next/cache';
