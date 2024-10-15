@@ -10,11 +10,11 @@ import MarqueeSlider from '@/components/MarqueeSlider';
 
 const Landing = () => {
   return (
-    <div className="">
+    <div className="min-h-screen max-h-screen relative overflow-hidden">
       <Sidebar />
-      <header className="section-header">
+      <header className="section-header min-h-screen max-h-screen relative">
         <NavBar />
-        <div className="px-8 lg:px-14 pt-4 xl:px-28 flex flex-col lg:flex-row items-center lg:items-start">
+        <div className="px-8 lg:px-14 pt-4 xl:px-28 flex flex-col justify-between lg:justify-normal lg:flex-row items-center lg:items-start">
           <div className="w-full max-w-[550px] text-[#496A8D] flex flex-col gap-4 items-center lg:items-start text-center lg:text-left text-pretty">
             <h1 className="text-xl md:text-3xl xl:text-5xl font-bold">
               Book Appointments with Top Doctors Anytime, Anywhere!
@@ -34,33 +34,27 @@ const Landing = () => {
             </div>
           </div>
 
-          <div className="flex relative">
+          <div className="flex relative h-full ">
             <Image
               src="/assets/images/landing-doc.png"
               alt="image"
               width={1000}
               height={1000}
-              className="w-[28rem] h-[28rem] object-contain relative z-10"
+              className="w-[28rem] lg:h-[35rem] h-[50%] mt-0 lg:mt-20  object-contain relative z-10"
             />
-            {/* <Image
-              src="/assets/images/calenda.png"
-              alt="image"
-              width={1000}
-              height={1000}
-              className="absolute top-6 left-28 md:left-60 lg:inset-0 lg:relative w-[12rem] h-[12rem] object-contain"
-            /> */}
+         
             <Image
               src="/assets/svgs/doc.svg"
               alt="image"
               width={100}
               height={100}
-              className="absolute top-6 left-28 md:left-60 block lg:hidden xl:block xl:inset-0 lg:relative w-[18rem] h-[18rem] object-contain"
+              className="absolute top-6 left-[5rem] md:left-[8rem] xl:left-[15rem] block  xl:inset-0  w-[18rem] h-[18rem] object-contain"
             />
           </div>
         </div>
       </header>
-      <WhyUs />
-      <MarqueeSlider />
+      {/* <WhyUs />
+      <MarqueeSlider /> */}
     </div>
   );
 };
