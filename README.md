@@ -48,7 +48,7 @@ Make sure you have the following installed:
 1. **Clone the Repository**
 
 ```
- git clone https://github.com/your-username/mediconn.git
+ git clone https://github.com/Bright-Abel/MediConn.git/
  cd mediconn
  npm install
 ```
