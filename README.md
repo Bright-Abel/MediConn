@@ -47,11 +47,11 @@ Make sure you have the following installed:
 
 1. **Clone the Repository**
 
-   \`\`\`bash
-   git clone https://github.com/your-username/mediconn.git
-   cd mediconn
-   npm install
-   \`\`\`
+```
+ git clone https://github.com/your-username/mediconn.git
+ cd mediconn
+ npm install
+```
 
 2. **Set up Appwrite**
 
@@ -68,14 +68,15 @@ Make sure you have the following installed:
 
 Create a `.env` file in the root directory and add the following variables:
 
-\`\`\`bash
+```
 NEXT_PUBLIC_APPWRITE_PROJECT_ID=your_appwrite_project_id
 NEXT_PUBLIC_APPWRITE_API_ENDPOINT=your_appwrite_endpoint
 NEXT_PUBLIC_TWILIO_ACCOUNT_SID=your_twilio_account_sid
 NEXT_PUBLIC_TWILIO_AUTH_TOKEN=your_twilio_auth_token
 NEXT_PUBLIC_TWILIO_PHONE_NUMBER=your_twilio_phone_number
 NEXT_PUBLIC_SENTRY_DSN=your_sentry_dsn
-\`\`\`
+NEXT_PUBLIC_SENTRY_ENVIRONMENT=production
+```
 
 ## Usage
 
@@ -92,4 +93,3 @@ NEXT_PUBLIC_SENTRY_DSN=your_sentry_dsn
 ### Admin Dashboard
 
 - Admins can log in to the dashboard to manage doctor profiles and oversee appointment bookings.
-  
