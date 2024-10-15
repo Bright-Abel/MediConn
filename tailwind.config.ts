@@ -81,7 +81,7 @@ const config = {
   },
   plugins: [
     require('tailwindcss-animate'),
-    function ({ addUtilities }) {
+    function ({ addUtilities }: { addUtilities: Function }) {
       const newUtilities = {
         '.border-gradient-45deg': {
           'border-image-source': 'var(--border-gradient-45deg)',
