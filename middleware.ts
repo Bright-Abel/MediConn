@@ -27,8 +27,8 @@ export async function middleware(req: NextRequest) {
   // Resist unregistered user from accessing the dashboard
   if (patient < 1 && url.pathname.includes('/dashboard')) {
     return NextResponse.redirect(new URL('/register', req.url));
-  } else if (patient === 1 && url.pathname.includes('/register')) {
-    return NextResponse.redirect(new URL('/dashboard', req.url));
+  } else if (patient === 1 && url.pathname.includes('/user/register')) {
+    return NextResponse.redirect(new URL('/user/dashboard', req.url));
   }
 
   return NextResponse.next();
@@ -37,5 +37,3 @@ export async function middleware(req: NextRequest) {
 export const config = {
   matcher: ['/user/:path*', '/admin/:path*'],
 };
-
-
