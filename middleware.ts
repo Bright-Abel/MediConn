@@ -25,8 +25,8 @@ export async function middleware(req: NextRequest) {
 
   const patient = await restrictUser(userId);
   // Resist unregistered user from accessing the dashboard
-  if (patient < 1 && url.pathname.includes('/dashboard')) {
-    return NextResponse.redirect(new URL('/register', req.url));
+  if (patient < 1 && url.pathname.includes('/user/dashboard')) {
+    return NextResponse.redirect(new URL('/user/register', req.url));
   } else if (patient === 1 && url.pathname.includes('/user/register')) {
     return NextResponse.redirect(new URL('/user/dashboard', req.url));
   }
