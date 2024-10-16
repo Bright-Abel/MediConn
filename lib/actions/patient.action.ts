@@ -133,3 +133,17 @@ export const signOutUser = async () => {
     console.log(error);
   }
 };
+
+export const restrictUser = async (userid: string) => {
+  try {
+    const patient = await databases.listDocuments(
+      process.env.NEXT_PUBLIC_DATABASE_ID!,
+      process.env.NEXT_PUBLIC_PATIENT_COLLECTION_ID!,
+      [Query.equal('userId', userid)]
+    );
+    
+    return JSON.parse(JSON.stringify(patient.total));
+  } catch (error) {
+    console.log('patient error', error);
+  }
+};

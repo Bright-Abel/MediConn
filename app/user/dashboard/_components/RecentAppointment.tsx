@@ -90,7 +90,7 @@ const RecentAppointment = () => {
         return (
           <div className="flex flex-nowrap items-center gap-3">
             <Image
-              src={doctor?.doc_img_url || '/default-doctor-image.png'}
+              src={doctor?.doc_img_url || 's'}
               alt={doctor?.name || 'doc_img'}
               width={32}
               height={32}

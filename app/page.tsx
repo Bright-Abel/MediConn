@@ -8,6 +8,7 @@ import Image from 'next/image';
 
 
 const Landing = () => {
+ 
   return (
     <div className="min-h-screen max-h-screen relative overflow-hidden">
       <Sidebar />
